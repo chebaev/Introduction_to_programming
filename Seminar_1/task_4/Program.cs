@@ -1,7 +1,7 @@
 ﻿
 
 int count = 1;
-int a = 0, b = 0;
+int a = 0, b = 0, c= 0, max = 0;
 
 bool flag = true;
 while (flag)
@@ -26,23 +26,40 @@ while (flag)
         if (Proverka(str) == "Число")
         {
             b = int.Parse(str);
-            flag = false;
+            count++;
         }
-         else
+        else
+        {
+            Console.Clear();
+        }
+    }
+    else if (count == 3)
+    {
+        if (Proverka(str) == "Число")
+        {
+            c = int.Parse(str);
+            flag = false;
+            max = a;
+        }
+        else
         {
             Console.Clear();
         }
     }
 }
-if (a > b)
-    {
-        Console.Write($"max = {a}");
-    }
-    else
-    {
-        Console.Write($"max = {b}");
+if (max < b)
+{
+    max = b;
+    // Console.Write($"max = {a}");
+}
+if (max < c)
 
-    }
+{
+    max = c;
+
+}
+
+Console.Write($"{a} {b} {c} -> {max}");
 
 
 static string Proverka(string str)
