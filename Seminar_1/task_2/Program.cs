@@ -28,21 +28,20 @@ while (flag)
             b = int.Parse(str);
             flag = false;
         }
-         else
+        else
         {
             Console.Clear();
         }
     }
 }
 if (a > b)
-    {
-        Console.Write($"max = {a}");
-    }
-    else
-    {
-        Console.Write($"max = {b}");
-
-    }
+{
+    Console.Write($"max = {a}");
+}
+else
+{
+    Console.Write($"max = {b}");
+}
 
 
 static string Proverka(string str)
