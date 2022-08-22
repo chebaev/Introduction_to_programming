@@ -22,8 +22,10 @@ while (flag)
 
     if (Proverka(number) == "Число")
     {
+       int num = Convert.ToInt32(number);
 
-        Console.WriteLine($"{number} -> {number[1]}");
+
+        Console.WriteLine($"{number} -> {(num % 100)/10}");
         flag = false;
     }
     else
