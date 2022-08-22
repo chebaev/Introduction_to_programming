@@ -22,16 +22,11 @@ while (flag)
     {
         int num = Convert.ToInt32(number);
 
-        if (num > 99 && num < 999)
-        {
-            Console.WriteLine($"{number} -> {num % 10}");
-
-        }
-        else if (num > 999)
+        if (num > 99)
         {
             Console.WriteLine($"{number} -> {(num / 100) % 10}");
-        }
 
+        }
         else
         {
             Console.WriteLine($"{number} -> Третьей цифры нет");
