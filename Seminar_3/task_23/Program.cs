@@ -18,16 +18,22 @@
     }
 }
 
+int N = Proverka();
 
-//Console.WriteLine("Ввидите чсло");
-int N = Proverka();//Convert.ToInt32(Console.ReadLine());
 
 int count = 1;
-string temp = "";
-while(count <= N)
+string temp = " ";
+while (count <= N)
 {
-    temp = temp +' '+ Math.Pow(count, 3);
-    
-    count++;      
+    if (temp == " ")
+    {
+        temp = Convert.ToString(Math.Pow(count, 3));
+    }
+    else
+    {
+        temp = temp + ", " + Math.Pow(count, 3);
+    }
+    count++;
 }
-Console.WriteLine($"{N} ->  {temp} "); 
+
+Console.WriteLine($"{N} ->  {temp} ");
