@@ -18,10 +18,18 @@
     }
 }
 
-int number = Proverka();
-int summa = 0;
-
-foreach (char c in Math.Abs(number).ToString())
+void Sum_of_digits(int elem)
+{
+    int summa = 0;
+    foreach (char c in Math.Abs(elem).ToString())
         summa += c - '0';
-Console.WriteLine($"{number} -> {summa}");
+    Console.WriteLine($"{elem} -> {summa}");
+
+}
+
+int number = Proverka();
+Sum_of_digits(number);
+
+
+
 
