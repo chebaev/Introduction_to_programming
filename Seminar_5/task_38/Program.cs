@@ -29,7 +29,6 @@ double SumOfElements(double[] temp)
         {
             min = temp[i];
         }
-        Console.WriteLine($"min = {min}");  
     }
     for (int i = 1; i < temp.Length; i++)
     {
@@ -37,7 +36,6 @@ double SumOfElements(double[] temp)
         {
             max = temp[i];
         }
-        Console.WriteLine($"max = {max}");
     }
     return (max - min);
 }
