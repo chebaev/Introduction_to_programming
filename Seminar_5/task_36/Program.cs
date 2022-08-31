@@ -1,4 +1,5 @@
-﻿int Proverka()
+﻿/// Функция Получение строки и проверка на число.
+int Proverka()
 {
     int number;
     while (true)
@@ -18,6 +19,8 @@
         }
     }
 }
+
+///Функция Нахождения суммы элементов, стоящих на нечётных позициях
 int SumOfElements(int[] temp)
 {
     int count = 0;
@@ -31,18 +34,17 @@ int SumOfElements(int[] temp)
     return count;
 }
 
+///Функция Заполненный массива случайными двухзначными числами
 int[] CreateArray(int number)
 {
-
     int[] array = new int[number];
     for (int i = 0; i < number; i++)
     {
-
         array[i] = new Random().Next(-10, 101);
-
     }
     return array;
 }
+
 int num = Proverka();
 
 int[] array = CreateArray(num);
