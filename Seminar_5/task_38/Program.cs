@@ -1,4 +1,5 @@
-﻿int Proverka()
+﻿/// Функция Получение строки и проверка на число.
+int Proverka()
 {
     int number;
     while (true)
@@ -18,6 +19,8 @@
         }
     }
 }
+
+/// Функция ищит разницу между максимальным и минимальным элементов массива
 double SumOfElements(double[] temp)
 {
     double max = temp[0];
@@ -40,15 +43,14 @@ double SumOfElements(double[] temp)
     return (max - min);
 }
 
+/// Функция Формирование массива из вещественных чисел
 double[] CreateArray(int number)
 {
 
     double[] array = new double[number];
     for (int i = 0; i < number; i++)
     {
-
         array[i] = new Random().Next(1, 101);
-
     }
     return array;
 }
@@ -56,7 +58,7 @@ double[] CreateArray(int number)
 int num = Proverka();
 
 double[] array = CreateArray(num);
-Console.WriteLine($"[{string.Join(", ", array)}]  -> {SumOfElements(array)}");
+Console.WriteLine($"[ {string.Join(", ", array)} ]  -> {SumOfElements(array)}");
 
 
 
