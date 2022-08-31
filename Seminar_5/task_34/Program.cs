@@ -1,4 +1,5 @@
-﻿int Proverka()
+﻿/// Функция Получение строки и проверка на число.
+int Proverka()
 {
     int number;
     while (true)
@@ -18,6 +19,8 @@
         }
     }
 }
+
+///Функция Подсчет количества чётных чисел из массива
 int GetCount(int[] temp)
 {
     int count = 0;
@@ -31,21 +34,19 @@ int GetCount(int[] temp)
     return count;
 }
 
+///Функция Заполненный массива случайными трёхзначными числами
 int[] CreateArray(int number)
 {
-
     int[] array = new int[number];
     for (int i = 0; i < number; i++)
     {
-
         array[i] = new Random().Next(100, 1000);
-
     }
     return array;
 }
 int num = Proverka();
 
 int[] array = CreateArray(num);
-Console.WriteLine($"[{string.Join(", ", array)}]  -> {GetCount(array)}");
+Console.WriteLine($"[ {string.Join(", ", array)} ]  -> {GetCount(array)}");
 
 
