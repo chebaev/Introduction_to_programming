@@ -35,19 +35,20 @@ int SumOfElements(int[] temp)
 }
 
 ///Функция Заполненный массива случайными двухзначными числами
-int[] CreateArray(int number)
+int[] CreateArray(int number, int minValue, int maxValue)
 {
     int[] array = new int[number];
     for (int i = 0; i < number; i++)
     {
-        array[i] = new Random().Next(-10, 101);
+        array[i] = new Random().Next(minValue, maxValue + 1);
     }
     return array;
 }
 
 int num = Proverka();
 
-int[] array = CreateArray(num);
+int[] array = CreateArray(num, -10, 100);
+
 Console.WriteLine($"[{string.Join(", ", array)}]  -> {SumOfElements(array)}");
 
 
