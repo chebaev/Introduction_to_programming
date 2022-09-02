@@ -45,4 +45,5 @@ string text = "Введите массив чисел через запетую 
 string str = Proverka(text);
 int[] array = str.Split(',').Select(int.Parse).ToArray();
 
+Console.WriteLine();
 Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", MethodBubble(array))}]");
