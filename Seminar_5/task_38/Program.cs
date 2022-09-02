@@ -59,13 +59,13 @@ double SumDifference(double[] temp)
 }
 
 /// Функция Формирование массива из вещественных чисел
-double[] CreateArray(int number)
+double[] CreateArray(int number, int minValue, int maxValue)
 {
 
     double[] array = new double[number];
     for (int i = 0; i < number; i++)
     {
-        double temp = new Random().Next(1, 101) / 10f;
+        double temp = new Random().Next(minValue, maxValue + 1) / 10f;
         array[i] = Math.Round(temp, 3);
     }
     return array;
@@ -73,7 +73,7 @@ double[] CreateArray(int number)
 
 int num = Proverka();
 
-double[] array = CreateArray(num);
+double[] array = CreateArray(num, 1, 100);
 Console.WriteLine($"[ {string.Join("  ", array)}] -> {SumDifference(array)}");
 
 
