@@ -20,26 +20,41 @@ int Proverka()
     }
 }
 
-/// Функция ищит разницу между максимальным и минимальным элементов массива
-double SumOfElements(double[] temp)
+//Функция нахождения минимума в массиве
+double MinArray(double[] arraymin)
 {
-    double max = temp[0];
-    double min = temp[0];
+    double min = arraymin[0];
+    for (int i = 1; i < arraymin.Length; i++)
+    {
+        if (arraymin[i] < min)
+        {
+            min = arraymin[i];
+        }
+    }
+    return min;
+}
 
-    for (int i = 1; i < temp.Length; i++)
+//Функция нахождения максимума в массиве
+double MaxArray(double[] arraymax)
+{
+    double max = arraymax[0];
+    for (int i = 1; i < arraymax.Length; i++)
     {
-        if (temp[i] < min)
+        if (arraymax[i] > max)
         {
-            min = temp[i];
+            max = arraymax[i];
         }
     }
-    for (int i = 1; i < temp.Length; i++)
-    {
-        if (temp[i] > max)
-        {
-            max = temp[i];
-        }
-    }
+    return max;
+}
+
+
+/// Функция вычисляет разницу между максимальным и минимальным 
+double SumDifference(double[] temp)
+{
+    double max = MaxArray(temp);
+    double min = MinArray(temp);
+
     return (max - min);
 }
 
@@ -50,7 +65,8 @@ double[] CreateArray(int number)
     double[] array = new double[number];
     for (int i = 0; i < number; i++)
     {
-        array[i] = new Random().Next(1, 101);
+        double temp = new Random().Next(1, 101) / 10f;
+        array[i] = Math.Round(temp, 3);
     }
     return array;
 }
@@ -58,7 +74,7 @@ double[] CreateArray(int number)
 int num = Proverka();
 
 double[] array = CreateArray(num);
-Console.WriteLine($"[ {string.Join(", ", array)} ]  -> {SumOfElements(array)}");
+Console.WriteLine($"[ {string.Join("  ", array)}] -> {SumDifference(array)}");
 
 
 
