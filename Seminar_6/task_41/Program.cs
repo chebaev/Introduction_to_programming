@@ -1,4 +1,4 @@
-﻿//Функция проверки массива на число
+﻿//Функция проверки на число
 bool CheckingForNumber(string str)
 {
     int num;
