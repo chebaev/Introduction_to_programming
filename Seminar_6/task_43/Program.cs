@@ -28,7 +28,7 @@ double GetData(string message)
 double[] FindIntersections(double b1, double k1, double b2, double k2)
 {
     double[] temp = new double[2];
-    if (b1 == b2 & k1 == k2) Console.WriteLine("Прямые совподают");
+    if (b1 == b2 & k1 == k2) Console.WriteLine("Прямые совпадают");
     else if (k1 == k2) Console.WriteLine("Прямые параллельны друг другу");
     else
     {
