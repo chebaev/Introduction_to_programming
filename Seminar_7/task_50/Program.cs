@@ -38,10 +38,10 @@ bool Proverka(string stringTemp)
     return false;
 }
 
-
+// Функция поиска числа в массиве
 void SearchNumberArray(int[,] array, int num)
 {
-    string text = " ";
+    string text = string.Empty;
     for (int row = 0; row < array.GetLength(0); row++)
     {
         for (int col = 0; col < array.GetLength(1); col++)
