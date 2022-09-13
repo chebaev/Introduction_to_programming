@@ -18,13 +18,19 @@
     }
 }
 
+
+void Temp(int A, int B)
+{
+    for (int i = 0; i < B; i++)
+    {
+        summa = summa * A;
+    }
+    Console.WriteLine($"{A}, {B} -> {summa}");
+}
+
 int A = Proverka("A");
 int B = Proverka("B");
 int summa = 1;
 Console.WriteLine($"Проверка = {Math.Pow(A, B)}");
 
-for (int i = 0; i < B; i++)
-{
-    summa = summa * A;
-}
-Console.WriteLine($"{A}, {B} -> {summa}");
+Temp(A, B);

@@ -24,6 +24,7 @@ int GetData(string message)
         }
     }
 }
+
 //Функция вывода массива и подсчёта сколько чисел больше 0
 void HowManyNumbers(int num)
 {

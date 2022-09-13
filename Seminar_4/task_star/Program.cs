@@ -14,9 +14,6 @@ void Herringbone(int number)
         }
         Console.WriteLine();
     }
-
-
-
 }
 
 int Proverka()

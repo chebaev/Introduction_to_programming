@@ -13,7 +13,6 @@ double[,] GetArray(int m, int n, int minValue, int maxValue)
     }
     return result;    
 }
-
 //Функция вывода массива в консоль
 void PrintArray(double[,] array)
 {
