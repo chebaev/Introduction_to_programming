@@ -7,15 +7,37 @@ int[,,] GetArray(int m, int n, int v, int minValue, int maxValue)
     {
         for (int j = 0; j < n; j++)
         {
-
             for(int k = 0; k < v; k++)
             {
-                result[i, j, k] = new Random().Next(minValue, maxValue +1);
+                while(true)
+                {
+                    int temp = new Random().Next(minValue, maxValue +1);
+                    if (CheckingMatchNumberArray(result, temp))
+                    {
+                    result[i, j, k] = temp;
+                    break;
+                    }
+                }
             }
         }
     }
     return result;    
 }
+
+// Функция проверки совпадения числа в массиве
+bool CheckingMatchNumberArray(int[,,] array, int number)
+{
+    foreach (var item in array)
+    {
+        if(item == number)
+        {
+            return false;
+            break;
+        }
+    }
+    return true; 
+}
+
 //Функция вывода массива в консоль
 void PrintArray(int[,,] array)
 {
@@ -33,5 +55,5 @@ void PrintArray(int[,,] array)
 
 }
 
-int[,,] myarray = GetArray(2, 2, 2, 10, 99);
+int[,,] myarray = GetArray(2, 4, 4, 10, 99);
 PrintArray(myarray);
