@@ -12,6 +12,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     }
     return result;    
 }
+
 //Функция для вывода массива в консоль 
 void PrintArray(int[,] array)
 {
@@ -23,7 +24,6 @@ void PrintArray(int[,] array)
         }
         Console.WriteLine();
     }
-
 }
 
 //Функция упорядочить массив по убыванию
